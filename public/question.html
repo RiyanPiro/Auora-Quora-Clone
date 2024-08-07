@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/png" href="images/fav.ico">
+
+  <title>Auora</title>
+
+<body class="grey lighten-3">
+  <!-- Nav Bar -->
+  <div class="navbar-fixed">
+    <nav class="red darken-2">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/index.html" class="brand-logo">Auora</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <div class="center row">
+                <div class="col s12 ">
+                  <div class="row red darken-4" id="topbarsearch" style="border-radius: 5px;">
+                    <div class="input-field col s6 s12 red-text">
+                      <i class="red-text material-icons prefix center">search</i>
+                      <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/explore.html">Explore</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/account.html"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SideNav -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/explore.html">Explore</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/account.html">Login</a></li>
+    <li><a href="/account.html">Sign Up</a></li>
+  </ul>
+
+  <!-- Main Section -->
+
+  <section class="section section-main">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 question-display">
+
+          <div class="collection">
+            <div id="question-answer-container">
+              <!-- Question and Answer input will be dynamically added here -->
+            </div>
+          </div>
+          <div>
+            <h4>Answers</h4>
+          </div>
+          <div class="collection">
+            <div id="answers-container">
+              <!-- <div class="collection-item avatar question-display">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="" class="circle">
+                <span class="title black-text bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  doloremque totam corporis perspiciatis atque laborum nisi, quo nulla molestias sunt, maxime, reiciendis
+                  laboriosam et. Aperiam officiis perspiciatis facere vero ab accusamus provident neque, modi ullam
+                  consequuntur in exercitationem</span>
+                <br>
+                <br>
+                <span">By - Anonymous on 20th March 2020</span>
+                <br>
+              </div> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="col m3 offset-m1">
+          <h4>Related Questions</h4>
+          <div class="collection">
+            <a href="https://www.quora.com/" class="collection-item">Why do we park our vehicles in a driveway and drive them on a parkway?</a>
+            <a href="https://www.quora.com/" class="collection-item">If cats have nine lives, how many lives do Bollywood action heroes have?</a>
+            <a href="https://www.quora.com/" class="collection-item">Why is it called a "building" when it’s already built? Shouldn't it be called a "built"?</a>
+            <a href="https://www.quora.com/" class="collection-item">Why do we call it 'chai tea' when 'chai' already means tea in Hindi?</a>
+            <a href="https://www.quora.com/" class="collection-item">If a cow laughed really hard, would milk come out of its nose?</a>
+            <a href="https://www.quora.com/" class="collection-item">If you sprinkle idli batter on a pancake, does it become a pan-dli?</a>
+            <a href="https://www.quora.com/" class="collection-item">If you wear a kurta with jeans, is it called fusion or confusion?</a>
+            <a href="https://www.quora.com/" class="collection-item">Why does 'laughter' contain 'slaughter'? Are jokes supposed to be that deadly?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="question.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.autocomplete').autocomplete({
+        data: {
+          'Delhi': null,
+          'Mumbai': null,
+          'Newyork': null,
+          'Mysore': null,
+          'Dubai': null,
+          'Dehradun': null,
+          'New Zealand': null,
+          'what': null,
+        }
+      });
+
+      $('.sidenav').sidenav();
+
+    });
+  </script>
+</body>
+
+</html>

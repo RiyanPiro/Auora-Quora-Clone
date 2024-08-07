@@ -1,0 +1,43 @@
+.question .card-image img {
+    max-height: 100px;
+}
+
+.question-display img {
+    max-height: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fav-tags a {
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+}
+
+.fav-tags a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.vote:hover{
+    color: rgb(150, 149, 149);
+}
+.upvote {
+    display: inline-block;
+    cursor: pointer;
+    color: #687074
+  } 
+  
+.upvote.on {
+    color: #f14e13
+}
+.downvote {
+    display: inline-block;
+    cursor: pointer;
+    color: #687074
+  } 
+  
+.downvote.on {
+    color: #6A5CFF
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="images/fav.ico">
+    
+    <title>Auora</title>
+    
+  <body class="grey lighten-3">
+  <!-- Nav Bar -->
+  <div class="navbar-fixed">
+    <nav class="red darken-2">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/index.html" class="brand-logo">Auora</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <div class="center row">
+                <div class="col s12 ">
+                  <div class="row red darken-4" id="topbarsearch" style="border-radius: 5px;">
+                    <div class="input-field col s6 s12 red-text">
+                      <i class="red-text material-icons prefix center">search</i>
+                      <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/explore.html">Explore</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/account.html"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SideNav -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/explore.html">Explore</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/account.html">Login</a></li>
+    <li><a href="/account.html">Sign Up</a></li>
+  </ul>
+    
+    <!-- Main Section -->
+
+    <section class="section section-main">
+      <div class="container h1">
+        <blockquote>
+            <h3>
+                About Us
+            </h3>
+        </blockquote>
+        <p class="flow-text">At Aura, we are passionate about creating a vibrant community where anyone can ask questions, share knowledge, and ignite meaningful conversations. Inspired by the quest for understanding, Aura is a question-and-answer platform built to empower individuals to learn, grow, and illuminate the world with their ideas.
+
+            Just like the sun's aura radiates outward, we envision Aura fostering a space where knowledge transcends boundaries. Whether you're a seasoned expert or a curious learner, Aura welcomes you to:
+            
+            Ask anything: No question is too big, too small, or too out there. Our diverse community thrives on a vast range of inquiries, and we encourage you to delve into the topics that spark your curiosity.
+            Share your expertise: Do you have a unique perspective or in-depth knowledge? Aura provides the perfect platform to share your wisdom and make a real impact.
+            Learn from the best: With contributions from a vibrant community of users, Aura offers a wealth of insights and perspectives on a multitude of subjects.
+            Engage in meaningful discussions: Go beyond simple answers and delve deeper. Aura fosters an environment for respectful dialogue and constructive exchange of ideas.
+            We believe that everyone has something valuable to contribute, and that's what makes Aura truly special. Together, we can build a repository of knowledge that empowers individuals and illuminates the path forward.
+            
+            Join us on Aura today and embark on your journey of exploration and discovery!</p>
+      </div>
+    </section>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.autocomplete').autocomplete({
+              data: {
+                'Delhi': null,
+                'Mumbai': null,
+                'Newyork': null,
+                'Mysore': null,
+                'Dubai': null,
+                'Dehradun': null,
+                'New Zealand': null,
+                'what': null,
+              }
+            });
+
+          $('.sidenav').sidenav();
+
+        });
+    </script>
+  </body>
+</html>

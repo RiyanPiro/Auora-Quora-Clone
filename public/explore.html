@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="images/fav.ico">
+    
+    <title>Auora</title>
+    
+  <body class="grey lighten-3">
+  <!-- Nav Bar -->
+  <div class="navbar-fixed">
+    <nav class="red darken-2">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/index.html" class="brand-logo">Auora</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <div class="center row">
+                <div class="col s12 ">
+                  <div class="row red darken-4" id="topbarsearch" style="border-radius: 5px;">
+                    <div class="input-field col s6 s12 red-text">
+                      <i class="red-text material-icons prefix center">search</i>
+                      <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="">Explore</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/account.html"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SideNav -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="#">Explore</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/account.html">Login</a></li>
+    <li><a href="/account.html">Sign Up</a></li>
+  </ul>
+    
+    <!-- Main Section -->
+
+    <section class="section section-main">
+        <div class="section">            
+            <div class="card-panel center fav-tags">
+                <h5>
+                    <a href="https://www.quora.com/">Beauty ·</a>
+                    <a href="https://www.quora.com/">Science ·</a>
+                    <a href="https://www.quora.com/">Health ·</a>
+                    <a href="https://www.quora.com/">Education ·</a>
+                    <a href="https://www.quora.com/">Travel ·</a>
+                    <a href="https://www.quora.com/">Food ·</a>
+                    <a href="https://www.quora.com/">Politics ·</a>
+                    <a href="https://www.quora.com/">History ·</a>
+                    <a href="https://www.quora.com/">Sports ·</a>
+                    <a href="https://www.quora.com/">Entertainment ·</a>
+                    <a href="https://www.quora.com/">Personal Finance ·</a>
+                    <a href="https://www.quora.com/">Lifestyle ·</a>
+                    <a href="https://www.quora.com/">Parenting ·</a>
+                    <a href="https://www.quora.com/">Art & Design ·</a>
+                    <a href="https://www.quora.com/">Literature ·</a>
+                    <a href="https://www.quora.com/">Relationships ·</a>
+                    <a href="https://www.quora.com/">Philosophy ·</a>
+                    <a href="https://www.quora.com/">Fitness ·</a>
+                    <a href="https://www.quora.com/">Philosophy ·</a>
+                    <a href="https://www.quora.com/">Music ·</a>
+                    <a href="https://www.quora.com/">Movies ·</a>
+                    <a href="https://www.quora.com/">Television ·</a>
+                    <a href="https://www.quora.com/">Movies</a>
+                </h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.autocomplete').autocomplete({
+              data: {
+                'Delhi': null,
+                'Mumbai': null,
+                'Newyork': null,
+                'Mysore': null,
+                'Dubai': null,
+                'Dehradun': null,
+                'New Zealand': null,
+                'what': null,
+              }
+            });
+
+          $('.sidenav').sidenav();
+
+        });
+    </script>
+  </body>
+</html>

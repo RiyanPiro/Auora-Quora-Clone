@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/png" href="images/fav.ico">
+
+  <title>Auora</title>
+
+<body class="grey lighten-3">
+  <!-- Nav Bar -->
+  <div class="navbar-fixed">
+    <nav class="red darken-2">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/index.html" class="brand-logo">Auora</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <div class="center row">
+                <div class="col s12 ">
+                  <div class="row red darken-4" id="topbarsearch" style="border-radius: 5px;">
+                    <div class="input-field col s6 s12 red-text">
+                      <i class="red-text material-icons prefix center">search</i>
+                      <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/explore.html">Explore</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/account.html"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SideNav -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/explore.html">Explore</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/account.html">Login</a></li>
+    <li><a href="/account.html">Sign Up</a></li>
+  </ul>
+
+  <!-- Main Section -->
+
+  <section class="section section-main">
+    <div class="container">
+      <div class="row">
+        <div class="col m3 hide-on-small-only">
+          <h3>Favourite Tags</h3>
+          <div class="fav-tags">
+            <a href="https://www.quora.com/">Beauty</a><br>
+            <a href="https://www.quora.com/">Adventure</a><br>
+            <a href="https://www.quora.com/">Couples</a><br>
+            <a href="https://www.quora.com/">The Boys</a><br>
+            <a href="https://www.quora.com/">Space Travel</a><br>
+            <a href="https://www.quora.com/">Game of Thrones</a>
+            <hr>
+            <div>
+              <a href="https://www.quora.com/">About</a>
+              <a href="https://www.quora.com/"> · Careers</a>
+              <a href="https://www.quora.com/"> · Terms</a>
+              <a href="https://www.quora.com/"> · Privacy</a>
+              <a href="https://www.quora.com/"> · Acceptable Use</a>
+              <a href="https://www.quora.com/"> · Press</a>
+              <a href="https://www.quora.com/"> · Your Ad Choices</a>
+              <a href="https://www.quora.com/"> · Grievance Officer</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m8 offset-m1">
+          <div class="input-field">
+            <div class="collection">
+              <div class="collection-item">
+                <form id="question-form">
+                  <input type="text" id="question-field" placeholder="What is your Question?">
+                  <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="questions-container">
+            <!-- Questions will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.autocomplete').autocomplete({
+        data: {
+          'Delhi': null,
+          'Mumbai': null,
+          'Newyork': null,
+          'Mysore': null,
+          'Dubai': null,
+          'Dehradun': null,
+          'New Zealand': null,
+          'what': null,
+        }
+      });
+
+      $('.sidenav').sidenav();
+
+    });
+  </script>
+</body>
+</html>
